@@ -1,0 +1,18 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.9.0
+  - smartcontractkit/chainlink-brownie-contracts@0.6.1
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.9.0'
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.6.1'
+networks:
+  sepolia3:
+    verify: True
+    weth_token: '0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9'
+    dai_token: '0x53844F9577C2334e541Aec7Df7174ECe5dF1fCf0'
+    dai_usd_price_feed: '0x14866185B1962B63C3Ea9E03Bc1da838bab34C19'
+    eth_usd_price_feed: '0x14866185B1962B63C3Ea9E03Bc1da838bab34C19'
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
